@@ -1,3 +1,4 @@
+#!/bin/bash
 dockerprocesses() {
 	dockeroutput=$(docker ps --format 'table \033[0;31m{{.Label "com.docker.compose.project"}}\033[0m\t{{.ID}}\t\033[0;34m{{.Names}}\033[0m\t{{.Command}}\t{{.Status}}')
 	echo -e $dockeroutput
